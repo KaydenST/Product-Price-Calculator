@@ -68,6 +68,12 @@ int main ()
     Start:
 
 //Clearing the screen
+#ifdef _WIN64
+    //Clearing Screen in Windows (64 bit)
+    system("CLS");
+    
+#elif _WIN32
+    //Clearing Screen in Windows (32 bit)
     system("CLS");
 
 //Asking user for input, getting input, then directing the computer to certain parts of the program
